@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+black = "==20.8b1"
+# ipython
+# ipdb
+isort = "*"
+
+[packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+test = "pytest -s tests/"
+postinstall = "echo noop"
+format = "bash -c \"isort . && black .\""
+lint = "echo noop"
